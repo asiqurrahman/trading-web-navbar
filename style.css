@@ -18,13 +18,12 @@ body {
 
 #navbar2 {
   display: flex;
-  background-color: var(--color-one); 
   min-height: 8vh;
   font-family: 'Acme', sans-serif;
   overflow: hidden;
   width: 100%;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
 }
 
 .nav-links2{
@@ -80,7 +79,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
- 
+  
 }
 
 .nav-image h1 {
@@ -91,22 +90,58 @@ body {
  font-weight: bold;
  --animate-delay: 0.9s;
  color: white;
+
 }
 
-.nav-image img {
+.nav-h1 {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+ 
+}
+
+.nav-image div {
+  margin: 50px;
+} 
+
+
+#wave {
   width: 200%;
   height: 50%;
+  left: 0;
   position: absolute;
-  animation: wave linear 20s infinite;
+  animation: wave linear 40s infinite;
   bottom: 0;
+  z-index: 0;
+}
+
+#postimage {
+  
+  width: 500px;
+  height: 200px;
+  margin-left: 10vw;
+  display: flex;
+  justify-content: center;
+  margin-right: 1vw;
+  z-index: 4;
+}
+#postimage img {
+  height: 200px;
+  width: 200px;
+  z-index: 4;
+}
+
+#navbar2.scroll {
+  background-color: var(--color-three);
+  transition: 1000ms ease;
 }
 
 @keyframes wave {
-  0% {
-    transform: translate(-50%)
-  }
   100% {
-    transform: translate(0);
+    transform: translateX(0)
+  }
+  0% {
+    transform: translateX(-50%);
   }
 }
 
